@@ -1,0 +1,25 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    height: 100vh;
+    width: 100vw;
+
+    background-image: url(Images/background.jpg);
+}
+
+.calci {
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(99, 73, 73, 0.8);
+    backdrop-filter: saturate(180%) blur(10px);
+
+    min-height: 80%;
+    width: 50vw;
+}
