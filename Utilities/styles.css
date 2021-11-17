@@ -19,6 +19,7 @@ main {
 
     /* background: rgba(102, 69, 69, 0.8); */
     background: rgba(0, 0, 0, 0.25);
+    box-shadow: rgba(0, 0, 0, 0.5) 10px 10px 20px;
     backdrop-filter: saturate(180%) blur(5px);
     
     border-radius: 10px;
