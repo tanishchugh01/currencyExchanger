@@ -21,29 +21,91 @@
     <body>
         <main>
             <div class="maincard row">
-                <div
-                    class="uppercard h-50 w-100"
-                    style="background-color: rgba(0, 0, 255, 0.295)"
-                ></div>
+                <div class="uppercard h-50 w-100">
+                    <form>
+                        <div class="mb-3 text-center fw-bold">
+                            <label for="exampleInputEmail1" class="form-label"
+                                >Input The Value</label
+                            >
+                            <input
+                                type="number"
+                                class="form-control"
+                                id="inputNumber"
+                                aria-describedby="emailHelp"
+                            />
+                        </div>
+
+                        <div class="row">
+                            <div class="dropdown col">
+                                <select
+                                    class="form-select form-select-lg h-100 mb-3 bg-dark btn-outline-info"
+                                    aria-label=".form-select-lg example"
+                                >
+                                    <option selected>
+                                        Open this select menu
+                                    </option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+
+                            <button
+                                class="col btn-outline-danger btn btn-dark justify-content-center"
+                                type="button"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="
+                                        bi bi-arrow-left-right
+                                    "
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z"
+                                    />
+                                </svg>
+                            </button>
+
+                            <div class="dropdown col">
+                                <select
+                                    class="form-select form-select-lg mb-3 bg-dark btn-outline-info h-100"
+                                    aria-label=".form-select-lg example"
+                                >
+                                    <option selected>
+                                        Open this select menu
+                                    </option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
                 <div class="h-50 w-100 d-grid p-4 ms-5">
                     <div class="row">
                         <div class="col">
                             <button
-                                class="btn btn-lg btn-outline-dark btn-danger"
+                                class="btn btn-lg btn-outline-dark btn-danger w-50"
                             >
                                 1
                             </button>
                         </div>
                         <div class="col">
                             <button
-                                class="btn btn-lg btn-outline-dark btn-danger"
+                                class="btn btn-lg btn-outline-dark btn-danger w-50"
                             >
                                 2
                             </button>
                         </div>
                         <div class="col">
                             <button
-                                class="btn btn-lg btn-outline-dark btn-danger"
+                                class="btn btn-lg btn-outline-dark btn-danger w-50"
                             >
                                 3
                             </button>
@@ -52,21 +114,21 @@
                     <div class="row">
                         <div class="col">
                             <button
-                                class="btn btn-lg btn-outline-dark btn-danger"
+                                class="btn btn-lg btn-outline-dark btn-danger w-50"
                             >
                                 4
                             </button>
                         </div>
                         <div class="col">
                             <button
-                                class="btn btn-lg btn-outline-dark btn-danger"
+                                class="btn btn-lg btn-outline-dark btn-danger w-50"
                             >
                                 5
                             </button>
                         </div>
                         <div class="col">
                             <button
-                                class="btn btn-lg btn-outline-dark btn-danger"
+                                class="btn btn-lg btn-outline-dark btn-danger w-50"
                             >
                                 6
                             </button>
@@ -75,21 +137,21 @@
                     <div class="row">
                         <div class="col">
                             <button
-                                class="btn btn-lg btn-outline-dark btn-danger"
+                                class="btn btn-lg btn-outline-dark btn-danger w-50"
                             >
                                 7
                             </button>
                         </div>
                         <div class="col">
                             <button
-                                class="btn btn-lg btn-outline-dark btn-danger"
+                                class="btn btn-lg btn-outline-dark btn-danger w-50"
                             >
                                 8
                             </button>
                         </div>
                         <div class="col">
                             <button
-                                class="btn btn-lg btn-outline-dark btn-danger"
+                                class="btn btn-lg btn-outline-dark btn-danger w-50"
                             >
                                 9
                             </button>
@@ -98,9 +160,10 @@
                     <div class="row">
                         <div class="col">
                             <button
-                                class="btn btn-lg btn-outline-dark btn-danger"
+                                class="btn btn-lg btn-outline-dark w-50
+                                btn-danger w-50"
                             >
-                                <svg
+                                <!-- <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="16"
                                     height="16"
@@ -114,15 +177,15 @@
                                     <path
                                         d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V5zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2H3z"
                                     />
-                                </svg>
+                                </svg> -->
+                                .
                             </button>
                         </div>
                         <div class="col">
                             <button
                                 class="
                                     btn btn-lg btn-outline-dark
-                                    align-self-center
-                                    btn-danger
+                                    btn-danger w-50
                                 "
                             >
                                 0
@@ -130,7 +193,7 @@
                         </div>
                         <div class="col">
                             <button
-                                class="btn btn-lg btn-outline-dark btn-danger"
+                                class="btn btn-lg btn-outline-dark btn-danger w-50"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
