@@ -28,30 +28,29 @@
                             <input
                                 type="number"
                                 step="any"
-                                class="form-control mt-3 "
+                                class="form-control mt-3 text-info bg-dark"
                                 placeholder="Amount"
                                 id="inputNumber"
                                 aria-describedby="emailHelp"
                             />
                         </div>
 
-                        <div class="row">
-                            <div class="dropdown col">
-                                <select
-                                    class="
-                                        form-select form-select-lg
-                                        h-100
-                                        mb-3
-                                        bg-dark
-                                        link-info
-                                    "
-                                    aria-label=".form-select-lg example"
-                                >
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
-                            </div>
+                        <div class="row currencySelector">
+                            <input
+                                class="col form-control text-info bg-dark mx-2"
+                                list="currencies"
+                                name="currencies"
+                                autocomplete="off"
+                                placeholder="Select Currency"
+                            />
+
+                            <datalist id="currencies"> </datalist>
+                            <!-- datalist for currency selection made in js-->
+                            <!-- <option value="AED">
+                                    United Arab Emirates Dirham
+                                </option>
+                                <option value="2">dsds</option>
+                                <option value="3">Three</option> -->
 
                             <button
                                 class="
@@ -62,16 +61,12 @@
                                 type="button"
                             >
                                 <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="16"
-                                    height="16"
-                                    fill="currentColor"
-                                    class="bi bi-arrow-left-right"
-                                    viewBox="0 0 16 16"
+                                    style="width: 36px; height: 36px"
+                                    viewBox="0 0 24 24"
                                 >
                                     <path
-                                        fill-rule="evenodd"
-                                        d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z"
+                                        fill="currentColor"
+                                        d="M21,9L17,5V8H10V10H17V13M7,11L3,15L7,19V16H14V14H7V11Z"
                                     />
                                 </svg>
                             </button>
@@ -96,7 +91,8 @@
 
                         <button
                             class="
-                                btn btn-outline-danger btn-dark btn-lg align-items-center
+                                btn btn-outline-danger btn-dark btn-lg
+                                align-items-center
                                 justify-content-center
                                 align-self-center
                                 w-100

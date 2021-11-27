@@ -15,17 +15,30 @@ async function ratesPlease() {
 }
 
 symbolsPlease().then(
-    function(data) {
-        symbols = data.symbols;
+    
+    function (data) {
+        
+        const symbols = data.symbols;
+
+        const currencies = document.getElementById("currencies");
+
+        let ind = 0;
+
+        for (let code in symbols) {
+            let option = document.createElement("option");
+            option.value = code;
+            option.text = symbols[code];
+
+            currencies.appendChild(option);
+
+            ind++;
+        }
     },
-    function(error) {
+    
+    function (error) {
         console.log(error);
     }
 );
 
-let symbols;
-
-// for (let i = 0; i < symbols.length; i++) {
-//     console.log(symbols[i]);
-// }
-    
+// let symbols;
+// let select;

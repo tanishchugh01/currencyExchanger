@@ -45,3 +45,8 @@ main {
 #inputNumber::-ms-input-placeholder { /* Microsoft Edge */
     color: aqua;
 }
+
+.currencySelector option {
+    color: aqua;
+    background-color: blue;
+}
