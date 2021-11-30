@@ -1,6 +1,8 @@
+const apiKey="03173eb866cc2df4df13";
+
 async function symbolsPlease() {
     const response = await fetch(
-        "http://api.exchangeratesapi.io/v1/symbols?access_key=2c18d2c018a0ce911992d26a11ef5af3"
+        "https://free.currconv.com/api/v7/currencies?apiKey="+apiKey
     );
 
     return await response.json();
@@ -8,7 +10,7 @@ async function symbolsPlease() {
 
 async function ratesPlease() {
     const response = await fetch(
-        "http://api.exchangeratesapi.io/v1/latest?access_key=2c18d2c018a0ce911992d26a11ef5af3"
+        "https://free.currconv.com/api/v7/apiKey="+apiKey
     );
 
     return await response.json();
@@ -40,5 +42,6 @@ symbolsPlease().then(
     }
 );
 
+ratesPlease().then((data) => {console.log(data)}, (error) => {console.log(error)});
 // let symbols;
 // let select;
