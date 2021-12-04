@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">    
         <!-- icon -->
         <link rel="icon" href="assets/Images/icon.jpg" />
         <title>Currency Exchanger</title>
@@ -36,9 +36,16 @@
                             />
                         </div>
 
-                        <div class="row currencySelector ">
+                        <div class="row currencySelector">
                             <input
-                                class="col form-control text-info bg-dark ms-2 w-50"
+                                class="
+                                    col
+                                    form-control
+                                    text-info
+                                    bg-dark
+                                    ms-2
+                                    w-50
+                                "
                                 list="currencies"
                                 name="currencies"
                                 autocomplete="off"
@@ -46,21 +53,16 @@
                             />
 
                             <!-- datalist for currency selection made in js -->
-                            <datalist id="currencies"> 
-                            <option value="AED">
+                            <datalist id="currencies">
+                                <option value="AED">
                                     United Arab Emirates Dirham
                                 </option>
                                 <option value="2">Two</option>
                                 <option value="3">Three</option>
                             </datalist>
-                            
+
                             <button
-                            style="width: 10rem;"
-                                class="
-                                    col
-                                    btn-outline-danger btn btn-dark
-                                    ms-2
-                                "
+                                class="col w-75 btn-outline-danger btn btn-dark ms-2"
                                 type="button"
                             >
                                 <svg
@@ -74,15 +76,21 @@
                                 </svg>
                             </button>
 
-                            <div class="dropdown col">
-                                <input
-                                class="col form-control text-info bg-dark mx-2 h-100 ms-0 "
+                            <input
+                                class="
+                                    col
+                                    form-control
+                                    text-info
+                                    bg-dark
+                                    mx-2
+                                    w-10
+                                "
                                 list="currencies"
                                 name="currencies"
                                 autocomplete="off"
                                 placeholder="Select Currency"
                             />
-                                <!-- <select
+                            <!-- <select
                                     class="
                                         form-select form-select-lg
                                         mb-3
@@ -96,7 +104,6 @@
                                     <option value="2">Two</option>
                                     <option value="3">Three</option>
                                 </select> -->
-                            </div>
                         </div>
 
                         <button
@@ -127,8 +134,8 @@
 
                     <div
                         id="answer"
-                        class="text-center align-items-center h-90 mt-4"
-                    >
+                        class="text-center align-items-center h-80 mt-4"
+                        >
                         1234567890.8
                     </div>
                 </div>

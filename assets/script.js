@@ -3,7 +3,7 @@ const apiKey="03173eb866cc2df4df13";
 async function symbolsPlease() {
     const response = await fetch(
         "https://free.currconv.com/api/v7/currencies?apiKey=03173eb866cc2df4df13"
-    , {mode: 'no-cors'}
+    // , {mode: 'no-cors'}
         
 );
     return await response.json();
@@ -12,12 +12,12 @@ async function symbolsPlease() {
 async function ratesPlease() {
     const response = await fetch(
         "https://free.currconv.com/api/v7/currencies?apiKey="+apiKey
-        , {mode: 'no-cors'}
+        // , {mode: 'no-cors'}
     );
 
-    console.log(response);
-    const data = await response.json();
-    console.log(data);
+    // console.log(response);
+    // const data = await response.json();
+    // console.log(data);
     return await response.json();
 }
 
