@@ -24,14 +24,14 @@
         <main>
             <div class="maincard row">
                 <div class="uppercard h-50 w-100">
-                    <form>
+                    <form onsubmit="return submit()">
                         <div class="mb-3 text-center fw-bold">
                             <input
                                 type="number"
                                 step="any"
                                 class="form-control mt-3 text-info bg-dark"
                                 placeholder="Amount"
-                                id="inputNumber"
+                                id="amount"
                                 aria-describedby="emailHelp"
                             />
                         </div>
@@ -46,23 +46,19 @@
                                     ms-2
                                     w-50
                                 "
+                                id="fromCurrency"
                                 list="currencies"
-                                name="currencies"
                                 autocomplete="off"
                                 placeholder="Select Currency"
                             />
 
-                            <!-- datalist for currency selection made in js -->
-                            <datalist id="currencies">
-                                <option value="AED">
-                                    United Arab Emirates Dirham
-                                </option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </datalist>
-
                             <button
-                                class="col w-75 btn-outline-danger btn btn-dark ms-2"
+                                class="
+                                    col
+                                    w-75
+                                    btn-outline-danger btn btn-dark
+                                    ms-2
+                                "
                                 type="button"
                             >
                                 <svg
@@ -85,25 +81,26 @@
                                     mx-2
                                     w-10
                                 "
+                                id="toCurrency"
                                 list="currencies"
-                                name="currencies"
                                 autocomplete="off"
                                 placeholder="Select Currency"
                             />
+                            <!-- name="currencies" -->
                             <!-- <select
-                                    class="
+                                        class="
                                         form-select form-select-lg
                                         mb-3
                                         bg-dark
                                         h-100
                                         link-info
-                                    "
-                                    aria-label=".form-select-lg example"
-                                >
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select> -->
+                                        "
+                                        aria-label=".form-select-lg example"
+                                        >
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select> -->
                         </div>
 
                         <button
@@ -115,7 +112,8 @@
                                 w-100
                                 mt-2
                             "
-                            type="submit"
+                            type="button"
+                            onclick="submit();"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -132,10 +130,17 @@
                         </button>
                     </form>
 
+                    <!-- datalist for currency selection made in js -->
+                    <datalist id="currencies">
+                        <option value="AED">United Arab Emirates Dirham</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </datalist>
+
                     <div
                         id="answer"
                         class="text-center align-items-center h-80 mt-4"
-                        >
+                    >
                         1234567890.8
                     </div>
                 </div>
