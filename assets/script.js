@@ -3,7 +3,6 @@ const apiKey = "03173eb866cc2df4df13";
 async function symbolsPlease() {
     const response = await fetch(
         "https://free.currconv.com/api/v7/currencies?apiKey=" + apiKey
-        // , {mode: 'no-cors'}
     );
     return await response.json();
 }
@@ -11,7 +10,6 @@ async function symbolsPlease() {
 async function ratesPlease(from, to) {
     const response = await fetch(
         `https://free.currconv.com/api/v7/convert?q=${from}_${to}&compact=ultra&apiKey=${apiKey}`
-        // , {mode: 'no-cors'}
     );
 
     return await response.json();
@@ -33,25 +31,28 @@ symbolsPlease().then(
 
             currencies.appendChild(option);
         }
+        
+        console.log("Added elements");
     },
 
     function (error) {
         console.log(error);
     }
 );
+
 // let symbols = {};
-// ratesPlease("USD","INR").then((data) => {console.log(data)}, (error) => {console.log(error)});
+// ratesPlease("USD","INR").then((data) => console.log(data), (error) => {console.log(error)});
 // symbolsPlease().then((data) => {console.log(data);symbols=data}, (error) => {console.log(error)});
 
-function submit(){
+function submit() {
     const amount = document.getElementById("amount").value;
-    
+
     const from = document.getElementById("fromCurrency").value;
-    
+
     const to = document.getElementById("toCurrency").value;
-    
+
     convert(amount, from, to);
-    
+
     return false;
 }
 
@@ -61,9 +62,11 @@ function convert(amount, from, to) {
             document.getElementById("answer").innerHTML =
                 data[`${from}_${to}`] * amount;
         },
-        (error) => {
+        () => {
             document.getElementById("answer").innerHTML = ": )";
         }
     );
 }
+
 // print meaning of life
+// console.log(42);

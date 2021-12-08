@@ -24,70 +24,56 @@
         <main>
             <div class="maincard row">
                 <div class="uppercard h-50 w-100">
-                    <form onsubmit="return submit()">
-                        <div class="mb-3 text-center fw-bold">
-                            <input
-                                type="number"
-                                step="any"
-                                class="form-control mt-3 text-info bg-dark"
-                                placeholder="Amount"
-                                id="amount"
-                                aria-describedby="emailHelp"
-                            />
-                        </div>
+                    <!-- <form onsubmit="return submit()"> -->
+                    <div class="mb-3 text-center fw-bold">
+                        <input
+                            type="number"
+                            step="2"
+                            class="form-control mt-3 text-info bg-dark"
+                            placeholder="Amount"
+                            id="amount"
+                            aria-describedby="emailHelp"
+                        />
+                    </div>
 
-                        <div class="row currencySelector">
-                            <input
-                                class="
-                                    col
-                                    form-control
-                                    text-info
-                                    bg-dark
-                                    ms-2
-                                    w-50
-                                "
-                                id="fromCurrency"
-                                list="currencies"
-                                autocomplete="off"
-                                placeholder="Select Currency"
-                            />
+                    <div class="row currencySelector">
+                        <input
+                            class="col form-control text-info bg-dark ms-2 w-50"
+                            id="fromCurrency"
+                            list="currencies"
+                            autocomplete="off"
+                            placeholder="Select Currency"
+                        />
 
-                            <button
-                                class="
-                                    col
-                                    w-75
-                                    btn-outline-danger btn btn-dark
-                                    ms-2
-                                "
-                                type="button"
+                        <button
+                            class="
+                                col
+                                w-75
+                                btn-outline-danger btn btn-dark
+                                ms-2
+                            "
+                            type="button"
+                        >
+                            <svg
+                                style="width: 36px; height: 36px"
+                                viewBox="0 0 24 24"
                             >
-                                <svg
-                                    style="width: 36px; height: 36px"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path
-                                        fill="currentColor"
-                                        d="M21,9L17,5V8H10V10H17V13M7,11L3,15L7,19V16H14V14H7V11Z"
-                                    />
-                                </svg>
-                            </button>
+                                <path
+                                    fill="currentColor"
+                                    d="M21,9L17,5V8H10V10H17V13M7,11L3,15L7,19V16H14V14H7V11Z"
+                                />
+                            </svg>
+                        </button>
 
-                            <input
-                                class="
-                                    col
-                                    form-control
-                                    text-info
-                                    bg-dark
-                                    mx-2
-                                    w-10
-                                "
-                                id="toCurrency"
-                                list="currencies"
-                                autocomplete="off"
-                                placeholder="Select Currency"
-                            />
-                            <!-- name="currencies" -->
-                            <!-- <select
+                        <input
+                            class="col form-control text-info bg-dark mx-2 w-10"
+                            id="toCurrency"
+                            list="currencies"
+                            autocomplete="off"
+                            placeholder="Select Currency"
+                        />
+                        <!-- name="currencies" -->
+                        <!-- <select
                                         class="
                                         form-select form-select-lg
                                         mb-3
@@ -101,47 +87,47 @@
                                         <option value="2">Two</option>
                                         <option value="3">Three</option>
                                     </select> -->
-                        </div>
+                    </div>
 
-                        <button
-                            class="
-                                btn btn-outline-danger btn-dark btn-lg
-                                align-items-center
-                                justify-content-center
-                                align-self-center
-                                w-100
-                                mt-2
-                            "
-                            type="button"
-                            onclick="submit();"
+                    <button
+                        class="
+                            btn btn-outline-danger btn-dark btn-lg
+                            align-items-center
+                            justify-content-center
+                            align-self-center
+                            w-100
+                            mt-2
+                        "
+                        type="button"
+                        onclick="submit();"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-check-circle-fill"
+                            viewBox="0 0 16 16"
                         >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="16"
-                                height="16"
-                                fill="currentColor"
-                                class="bi bi-check-circle-fill"
-                                viewBox="0 0 16 16"
-                            >
-                                <path
-                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
-                                />
-                            </svg>
-                        </button>
-                    </form>
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                            />
+                        </svg>
+                    </button>
+                    <!-- </form> -->
 
                     <!-- datalist for currency selection made in js -->
                     <datalist id="currencies">
-                        <option value="AED">United Arab Emirates Dirham</option>
+                        <!-- <option value="AED">United Arab Emirates Dirham</option>
                         <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option value="3">Three</option> -->
                     </datalist>
 
                     <div
                         id="answer"
                         class="text-center align-items-center h-80 mt-4"
                     >
-                        1234567890.8
+                        <!-- 1234567890.8 -->
                     </div>
                 </div>
                 <div class="h-50 w-100 d-grid p-4 ms-5">
