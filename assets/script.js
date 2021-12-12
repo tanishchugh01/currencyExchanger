@@ -1,4 +1,4 @@
-// const apiKey = "03173eb866cc2df4df13";
+const apiKey = "03173eb866cc2df4df13";
 
 async function symbolsPlease() {
     const response = await fetch(
