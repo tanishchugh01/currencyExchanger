@@ -1,4 +1,4 @@
-const apiKey = "03173eb866cc2df4df13";
+// const apiKey = "03173eb866cc2df4df13";
 
 async function symbolsPlease() {
     const response = await fetch(
@@ -66,6 +66,17 @@ function convert(amount, from, to) {
             document.getElementById("answer").innerHTML = ": )";
         }
     );
+}
+
+function swapSymbols()
+{
+    let to = document.getElementById("fromCurrency");
+    let from = document.getElementById("toCurrency");
+    
+    //swap
+    let temp = to.value;
+    to.value=from.value;
+    from.value=temp;
 }
 
 // print meaning of life
