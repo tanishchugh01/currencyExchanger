@@ -1,5 +1,5 @@
-//api fetches
-// const apiKey = "03173eb866cc2df4df13";
+// api fetches
+const apiKey = "03173eb866cc2df4df13";
 
 async function symbolsPlease() {
     const response = await fetch(
@@ -48,6 +48,8 @@ symbolsPlease().then(
 
 //converting currencies
 function submit() {
+    capitalizeInputs();
+    
     const amount = document.getElementById("amount").value;
 
     const from = document.getElementById("fromCurrency").value;
@@ -57,6 +59,14 @@ function submit() {
     convert(amount, from, to);
 
     return false;
+}
+
+function capitalizeInputs() {
+    const from = document.getElementById("fromCurrency");
+    const to = document.getElementById("toCurrency");
+    
+    from.value = from.value.toUpperCase();
+    to.value = to.value.toUpperCase();
 }
 
 function convert(amount, from, to) {
@@ -88,7 +98,7 @@ let buttons = document.querySelectorAll(".btn");
 for (let ind in buttons) {
     if (ind > 1) {
         buttons[ind].addEventListener("click", (e) => {
-            if(ind==11)
+            if(ind==181)
             {
                 addDecimal();
             }
@@ -100,14 +110,18 @@ for (let ind in buttons) {
             {
                 addNumber(e.target.innerHTML);
             }
-            // console.log(e.target.innerHTML);
-            // console.log(ind);
         });
     }
 }
 
 function addNumber(num) { 
-    console.log(num+"added");
+    let oldAmount=document.querySelector("#amount").value;
+    console.log(oldAmount);
+    oldAmount=oldAmount+num;
+    let newAmount=oldAmount.replace(/\s/g, '');
+    console.log(newAmount);
+    
+    document.querySelector("#amount").value=newAmount;
 }
 
 function addDecimal() {
@@ -115,9 +129,9 @@ function addDecimal() {
 }
 
 function addBackspace() {
-    console.log("backspace");
+    let oldAmount=document.querySelector("#amount").value;
+  
+    document.querySelector("#amount").value=oldAmount.slice(0,oldAmount.length-1);
 }
-//13 is backspace
-//11 is .
 // print meaning of life
 // console.log(42);
